@@ -14,8 +14,8 @@ const jobDescription = "Looking for React developer";
 
 connectDB();
 
-app.listen(PORT,()=>{
-    console.log(`Server started at port ${PORT}`);
+app.listen(3000,()=>{
+    console.log(`Server started at port ${3000}`);
 })
 
 

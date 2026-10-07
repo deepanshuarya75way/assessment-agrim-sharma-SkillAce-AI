@@ -10,8 +10,8 @@ const rateLimiter = require("../middlewares/rateLimiter");
  * @access Public
  */
 authRouter.post('/register',authController.registerUserController)
-authRouter.post('/login',rateLimiter,authController.loginUserController)
-
+authRouter.post('/login',authController.loginUserController)
+authRouter.post('/refresh',authController.refreshTokenController);
 /**
  * @route GET /api/auth/logout
  * @description clear token from user cookie and add the token in blacklist

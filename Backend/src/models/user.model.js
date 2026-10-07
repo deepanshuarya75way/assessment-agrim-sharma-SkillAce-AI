@@ -18,6 +18,14 @@ const userSchema = mongoose.Schema({
      geminiApiKey: {
         type: String,
         default: ""
+    },
+    refreshTokenHash:{
+        type:String,
+        default:null
+    },
+    refreshTokenExpiresAt:{
+        type:Date,
+        default:null
     }
 })
 
