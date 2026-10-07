@@ -3,11 +3,11 @@ const bcrypt = require('bcryptjs')
 const jwt = require("jsonwebtoken")
 const crypto = require("crypto");
 const tokenBlacklistModel = require('../models/blacklist.model');
-const cookieOptions = {
+const accessCookieOptions = {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
-    maxAge: 15 * 60 * 1000 // 15 min
+    maxAge: 1* 60 * 1000 // 15 min
 };
 
 const refreshCookieOptions = {
